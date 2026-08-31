@@ -40,7 +40,7 @@ hmac = "0.13"
 base64 = "0.23"
 openmls = "0.8"
 openmls_rust_crypto = "0.5"
-openmls_traits = "0.5"
+openmls_traits = "0.6"
 tls_codec = "0.4"
 ts-rs = { workspace = true, optional = true }
 
