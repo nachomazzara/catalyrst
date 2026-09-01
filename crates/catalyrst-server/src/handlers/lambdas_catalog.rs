@@ -44,6 +44,10 @@ fn outfits_cache() -> &'static Arc<ResponseCache<String, Value>> {
     })
 }
 
+pub fn invalidate_outfits_cache() {
+    outfits_cache().clear();
+}
+
 fn catalog_params_from_query(qs: &str) -> CatalogParams {
     let p = parse_query_string(qs);
     CatalogParams {

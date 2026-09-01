@@ -156,6 +156,7 @@ pub async fn create_entity_multipart(
                 "POST /entities - Deployment successful"
             );
             state.deployments_cache.clear();
+            super::lambdas_catalog::invalidate_outfits_cache();
             Ok((
                 StatusCode::OK,
                 Json(json!({ "creationTimestamp": creation_timestamp })),
@@ -238,6 +239,7 @@ pub async fn create_entity(
                 "POST /entities - Deployment successful"
             );
             state.deployments_cache.clear();
+            super::lambdas_catalog::invalidate_outfits_cache();
             Ok((
                 StatusCode::OK,
                 Json(json!({ "creationTimestamp": creation_timestamp })),

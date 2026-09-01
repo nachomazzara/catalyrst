@@ -157,7 +157,6 @@ where
         }
     }
 
-    #[cfg(test)]
     pub fn clear(&self) {
         self.map.clear();
     }
